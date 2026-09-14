@@ -138,3 +138,41 @@ main {
         gap: 10px;
     }
 }
+
+/* ==========================================================================
+   6. ✨ 仿 Xiaoxi 風格的極簡頁腳 CSS ✨
+   ========================================================================== */
+footer {
+    max-width: 900px;         /* 保持和上方導航欄、內容區一樣的寬度 */
+    margin: 80px auto 40px;   /* 關鍵：上方留白 80px 隔開內容，下方留白 40px */
+    padding: 25px 20px 0;     /* 內邊距：左右有 20px 寬度防擠壓 */
+    border-top: 1px solid rgba(0, 0, 0, 0.05); /* 一條極淡的灰色頂部分割線 */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* 讓版權宣告在左，致謝文字在右 */
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.85rem;       /* 縮小字體大小 */
+    color: #86868b;           /* 使用蘋果風格的淡灰色，降低視覺權重 */
+}
+
+.footer-credit {
+    font-style: italic;       /* 右側的設計字體改為斜體，更有設計感 */
+}
+
+/* 📱 手機/iPad 直立畫面優化：當螢幕太窄時，頁腳自動變成上下居中排版 */
+@media (max-width: 768px) {
+    footer {
+        margin-top: 60px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
+
