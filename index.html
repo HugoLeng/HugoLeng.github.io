@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的名字 | 個人網站</title>
+    
+    <!-- 🔗 關鍵除錯點：這裡負責把外部的 CSS 檔案拉進來 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 頂部導航欄 -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">你的名字</a>
+            <nav>
+                <a href="#" class="nav-link active">首頁</a>
+                <a href="#resume" class="nav-link">履歷</a>
+                <a href="#projects" class="nav-link">項目</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要內容區 -->
+    <main>
+        <div class="profile-section">
+            
+            <!-- 左側頭像區域 -->
+            <div class="profile-image-container fade-in-element">
+                <!-- 我們先用一張網路上的灰色占位圖測試 -->
+                <img src="https://placeholder.com" alt="照片" class="profile-image">
+            </div>
+
+            <!-- 右側文字介紹區域 -->
+            <div class="profile-bio fade-in-element delay-1">
+                <h1>你好，我是你的名字</h1>
+                <h2>職稱 / 你的定位描述</h2>
+                
+                <div class="bio-text">
+                    <p>這裡填寫你的第一段簡介。例如你的學術背景、研究方向或工作經歷。</p>
+                    <p>這裡填寫第二段簡介。談談你目前正在關注的技術或興趣。</p>
+                </div>
+
+                <div class="contact-info fade-in-element delay-2">
+                    <p><strong>Email:</strong> your-email@example.com</p>
+                    <p><strong>Links:</strong> <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 🔗 關鍵除錯點：這裡負責把外部的 JavaScript 檔案拉進來，必須放在 body 的最後面 -->
+    <script src="script.js"></script>
+</body>
+</html>
