@@ -1,0 +1,140 @@
+/* ==========================================================================
+   1. 全域初始化（重設瀏覽器預設邊距）
+   ========================================================================== */
+* {
+    box-sizing: border-box; /* 讓寬度計算包含邊框，排版更精準 */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* 蘋果風格的極簡字體 */
+    background-color: #ffffff; /* 乾淨的純白背景 */
+    color: #1d1d1f;            /* 深灰色文字（比純黑更高級） */
+    line-height: 1.6;          /* 舒適的字距行高 */
+}
+
+/* ==========================================================================
+   2. 頂部導航欄（模仿 hexiaoxi.xyz 的毛玻璃效果）
+   ========================================================================== */
+header {
+    position: sticky; /* 滾動網頁時，導航欄會固定在頂部 */
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* 80% 透明度的白色背景 */
+    backdrop-filter: blur(20px);                /* 核心：iOS 風格的毛玻璃模糊效果 */
+    -webkit-backdrop-filter: blur(20px);        /* 確保 iPad/Safari 瀏覽器相容 */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* 底部一條極淡的分割線 */
+    z-index: 1000; /* 確保導航欄永遠浮在內容最上層 */
+}
+
+.nav-container {
+    max-width: 900px; /* 限制導航欄最大寬度 */
+    margin: 0 auto;   /* 置中對齊 */
+    display: flex;    /* 使用 Flexbox 彈性排版 */
+    justify-content: space-between; /* 名字在最左邊，選單在最右邊 */
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    text-decoration: none; /* 移除超連結底線 */
+}
+
+nav a {
+    color: #1d1d1f;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease; /* 讓顏色切換時有漸變效果 */
+}
+
+/* 當滑鼠移過去，或是該分頁被動態激活（Active）時，文字變成藍色 */
+nav a:hover, nav a.active {
+    color: #0066cc; 
+}
+
+/* ==========================================================================
+   3. 主要內容區域（左圖右字的響應式排版）
+   ========================================================================== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.profile-section {
+    display: flex; /* 讓照片和文字橫向並排 */
+    gap: 50px;     /* 照片和文字之間的間距 */
+}
+
+.profile-image-container {
+    flex: 0 0 250px; /* 固定照片區域寬度為 250px，不隨視窗縮放 */
+}
+
+.profile-image {
+    width: 100%;
+    border-radius: 12px; /* 圓角效果，顯得現代活潑 */
+}
+
+.profile-bio {
+    flex: 1; /* 文字區域自動填滿剩餘的空間 */
+}
+
+.profile-bio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-bio h2 {
+    color: #86868b; /* 職稱使用淡灰色 */
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.bio-text p {
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* 一條淡灰色的頂部橫線 */
+}
+
+/* ==========================================================================
+   4. ✨ 核心動畫效果：溫和升起淡入 ✨
+   ========================================================================== */
+.fade-in-element {
+    opacity: 0;                 /* 初始狀態完全透明 */
+    transform: translateY(20px); /* 初始狀態在原本位置下方 20px */
+    animation: slideUpIn 1.0s cubic-bezier(0.25, 1, 0.5, 1) forwards; /* 1秒內優雅升起 */
+}
+
+/* ⏳ 關鍵除錯點：利用延遲讓內容有先後登場的高級感 */
+.delay-1 { animation-delay: 0.2s; } /* 文字比照片慢 0.2 秒 */
+.delay-2 { animation-delay: 0.4s; } /* 聯絡資訊最慢出現 */
+
+@keyframes slideUpIn {
+    to {
+        opacity: 1;             /* 變成完全不透明 */
+        transform: translateY(0); /* 回到正確的位置 */
+    }
+}
+
+/* ==========================================================================
+   5. 響應式適配（當用手機或直立拿 iPad 查看時，自動切換排版）
+   ========================================================================== */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column; /* 橫排改為直排：照片在上、文字在下 */
+        align-items: center;
+        text-align: center;
+    }
+    .nav-container {
+        flex-direction: column; /* 導航欄在手機上也變成上下直排 */
+        gap: 10px;
+    }
+}
