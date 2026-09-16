@@ -1,7 +1,7 @@
 /* ==========================================================================
    1. 全域初始化（重設瀏覽器預設邊距）
    ========================================================================== */
-* {
+   * {
     box-sizing: border-box; /* 讓寬度計算包含邊框，排版更精準 */
     margin: 0;
     padding: 0;
@@ -142,37 +142,231 @@ main {
 /* ==========================================================================
    6. ✨ 仿 Xiaoxi 風格的極簡頁腳 CSS ✨
    ========================================================================== */
-footer {
-    max-width: 900px;         /* 保持和上方導航欄、內容區一樣的寬度 */
-    margin: 80px auto 40px;   /* 關鍵：上方留白 80px 隔開內容，下方留白 40px */
-    padding: 25px 20px 0;     /* 內邊距：左右有 20px 寬度防擠壓 */
-    border-top: 1px solid rgba(0, 0, 0, 0.05); /* 一條極淡的灰色頂部分割線 */
+   footer {
+    max-width: 900px;         /* 保持和上方導航欄、內容區一樣的最大寬度 */
+    margin: 100px auto 50px;  /* 上方留白 100px 隔開內容，下方留白 50px */
+    padding: 30px 20px 0;     /* 內邊距，防止文字貼到螢幕邊緣 */
+    border-top: 1px solid rgba(0, 0, 0, 0.06); /* 一條若隱若現的頂部分割線 */
 }
 
+/* 頁腳彈性主容器（將版權、Links、Email 完美橫向拉開） */
 .footer-container {
     display: flex;
-    justify-content: space-between; /* 讓版權宣告在左，致謝文字在右 */
-    align-items: center;
+    justify-content: space-between; 
+    align-items: flex-start; /* 頂端對齊，符合學術排版美學 */
 }
 
+/* 頁腳所有基礎文字設定 */
 footer p {
-    font-size: 0.85rem;       /* 縮小字體大小 */
-    color: #86868b;           /* 使用蘋果風格的淡灰色，降低視覺權重 */
+    font-size: 0.85rem;
+    color: #86868b;           /* 蘋果與 Xiaoxi 風格的淡灰色 */
+    line-height: 1.4;
 }
 
-.footer-credit {
-    font-style: italic;       /* 右側的設計字體改為斜體，更有設計感 */
+/* --- 中間 Links 區塊 --- */
+.footer-links-box {
+    text-align: left; 
 }
 
-/* 📱 手機/iPad 直立畫面優化：當螢幕太窄時，頁腳自動變成上下居中排版 */
+.links-label {
+    font-weight: 500;
+    color: #1d1d1f;           /* "Links" 標籤使用深黑色 */
+    font-size: 0.85rem;
+    margin-bottom: 6px;       /* 與下方的圖標保持 6px 微小間距 */
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 12px;                /* 控制兩個圖標之間的間距 */
+    margin-top: 0 !important; /* 強制覆蓋舊有邊距 */
+}
+
+.footer-icon {
+    font-size: 1.1rem;        /* 縮小圖標尺寸，使其看起來精緻不突兀 */
+    color: #86868b;           /* 預設為淡灰色 */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* 滑鼠滑過圖標時，溫和地轉化為各自的官方顏色 */
+.footer-icon:hover .fa-linkedin {
+    color: #0077b5;
+}
+
+.footer-icon:hover .fa-instagram {
+    color: #e1306c;
+}
+
+
+/* --- 右側 Email 區塊 --- */
+.footer-email-box {
+    text-align: right;        /* 讓右側文字全部向右對齊 */
+}
+
+.email-label {
+    font-weight: 500;
+    color: #1d1d1f;           /* "Email" 標籤使用深黑色 */
+    margin-bottom: 2px;       /* 與下一行的真實郵箱保持 2px 微小間距 */
+}
+
+.footer-email-link {
+    color: #86868b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* 當滑鼠移到頁腳郵箱時，變成黑色並加上底線 */
+.footer-email-link:hover {
+    color: #1d1d1f;
+    text-decoration: underline;
+}
+
+
+/* --- 📱 RWD 手機與平板直立畫面自動適應 --- */
 @media (max-width: 768px) {
-    footer {
-        margin-top: 60px;
-    }
     .footer-container {
-        flex-direction: column;
-        gap: 8px;
+        flex-direction: column; /* 超過窄螢幕時，橫排自動改為垂直直排 */
+        gap: 25px;              /* 每個區塊上下間距 25px */
+        align-items: center;
         text-align: center;
     }
+    .footer-links-box {
+        text-align: center;
+    }
+    .footer-social-links {
+        justify-content: center; /* 手機上圖標居中 */
+    }
+    .footer-email-box {
+        text-align: center;      /* 手機上郵箱文字居中 */
+    }
 }
 
+/* ==========================================================================
+   7. ✨ 仿 Xiaoxi 風格學術主體排版 (Education Body - 精簡優化版)
+   ========================================================================== */
+
+/* 整個 Education 大區塊：底端畫出一條高質感的分割橫線 */
+.education-section-block {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px 40px; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06); 
+}
+
+/* 網頁大標題 */
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 45px;
+    letter-spacing: -0.5px;
+}
+
+/* 學校與年份橫向拉開的容器 (學校在左、年份在右) */
+.edu-item-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;        
+    margin-bottom: 35px; 
+}
+
+/* 左側學校與學系詳細資訊 */
+.edu-details-left {
+    flex: 1;
+    padding-right: 20px; 
+}
+
+.edu-institution {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 4px;
+}
+
+.edu-department {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 2px;
+}
+
+.edu-degree {
+    font-size: 0.95rem;
+    color: #515154;
+}
+
+/* 右側年份：靠右對齊、淡灰色 */
+.edu-year-right {
+    font-size: 1rem;
+    color: #86868b;
+    font-weight: 400;
+    white-space: nowrap; 
+    text-align: right;
+    padding-top: 2px;    
+}
+
+/* 同一學校內的多個學院/子項目間距 */
+.edu-sub-block {
+    margin-top: 14px;
+}
+
+/* 確保第一個子區塊頂部不要有多餘的留白 */
+.edu-sub-block:first-of-type {
+    margin-top: 4px;
+}
+
+/* ⚖️ 內斂學術風榮譽樣式：低調深灰色、優雅斜體 */
+.edu-honor-subtle {
+    font-size: 0.95rem;
+    color: #515154;      
+    font-style: italic;  
+    margin-top: 2px;     
+}
+
+/* 📱 RWD 手機版/平板直立畫面自動調整 */
+@media (max-width: 768px) {
+    .edu-item-row {
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 25px;
+    }
+    .edu-year-right {
+        text-align: left; 
+        font-weight: 500;
+    }
+}
+
+/* ==========================================================================
+   9. ✨ 獎項頁面專屬放大樣式 (獎項在上、機構在下優化版)
+   ========================================================================== */
+/* 第一行：具體的獎項名稱（最大、最粗、全黑，視覺衝擊力拉滿） */
+.award-title-primary {
+    font-size: 1.25rem !important; /* 放大到 1.25rem */
+    font-weight: 500;              /* 使用 700 最粗體，彰顯獎項分量 */
+    color: #1d1d1f;
+    margin-bottom: 0px;
+}
+
+/* 第二行：頒發機構（大小適中、微深灰色，優雅內斂） */
+.award-institution-secondary {
+    font-size: 1.05rem !important; /* 調節至 1.05rem */
+    font-weight: 400;              /* 中等字重 */
+    color: #333333;
+    margin-bottom: 6px;            /* 與下方斜體描述保持舒適的間距 */
+}
+
+/* 第三行：低調的獲獎成果斜體描述 */
+.award-desc {
+    font-size: 0.95rem !important; /* 維持 0.95rem 的精緻尺寸 */
+    color: #515154;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   10. ✨ 獎項條目專屬緊湊間距類別 (Awards Item Layout Fix)
+   ========================================================================== */
+.award-item-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;        
+    margin-bottom: 13px !important; /* 🌟 核心修正：將原本的 35px 巨大間距縮小至 10px */
+}
