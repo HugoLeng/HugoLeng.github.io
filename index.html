@@ -7,20 +7,21 @@
     
     <!-- 🔗 關鍵除錯點：這裡負責把外部的 CSS 檔案拉進來 -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
     <!-- 頂部導航欄 -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Leng Hou Meng</a>
+            <a href="index.html" class="logo">Leng Hou Meng</a>
             <nav>
-                <a href="#" class="nav-link active">Home</a>
-                <a href="#resume" class="nav-link">Education</a>
-                <a href="#projects" class="nav-link">Positions</a>
-                <a href="#projects" class="nav-link">Publications</a>
-                <a href="#projects" class="nav-link">Honours & Awards</a>
-                <a href="#projects" class="nav-link">Qualifications</a>                
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="appointments.html" class="nav-link">Appointments</a>
+                <a href="publications.html" class="nav-link">Publications</a>
+                <a href="awards.html" class="nav-link">Honours & Awards</a>
+                <a href="qualifications.html" class="nav-link">Qualifications</a>                
             </nav>
         </div>
     </header>
@@ -42,27 +43,49 @@
                 
                 <div class="bio-text">
                     <p>
-                        He is currently a year 4 undergraduate student at the University of Macau - Honours College & Faculty of Engineering, majoring in Electromechanical Engineering. His research experiences are anchored by a two-year tenure as a Research Assistant at the Institute of Applied Physics and Materials Engineering, where he specializes in the cleanroom nanofabrication and optoelectronic characterization of 2D materials
+                        He is currently a year 4 undergraduate student at the University of Macau - Honours College & Faculty of Engineering, majoring in Electromechanical Engineering. 
+                        His research experiences are anchored by a two-year tenure as a Research Assistant at the Institute of Applied Physics and Materials Engineering, where he specializes in the cleanroom nanofabrication and optoelectronic characterization of 2D materials
                     </p>
                     <p>
-                        Beyond academics, he is actively participating in scout activities, playing multiple musical instruments, racing on tracks, and et cetera. Feel free to send an email for further collaborations.
+                        Beyond academics, he is actively participating in scout activities, playing multiple musical instruments, racing on tracks, and et cetera. 
+                        Feel free to send an email for further collaborations.
                     </p>
                 </div>
 
-                <div class="contact-info fade-in-element delay-2">
-                    <p><strong>Email:</strong> uc32570@um.edu.mo | hou.meng.leng@tecnico.ulisboa.pt </p>
-                    <p><strong>Links:</strong> <a href="https://www.linkedin.com/in/hou-meng-leng-2236253b9?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a></p>
-                </div>
+
             </div>
 
         </div>
     </main>
     <footer>
         <div class="footer-container">
-            <p>&copy; 2026 Leng Hou Meng. All rights reserved.</p>
-            <p class="footer-credit">Designed & Coded from iPad via GitHub Pages</p>
+            <!-- 1. 左側：完整保留你的版權宣告 -->
+            <div class="footer-left">
+                <p>&copy; 2026 Leng Hou Meng. All rights reserved.</p>
+            </div>
+            
+            <!-- 2. 中間：獨立的 Links 區塊（上行字，下行圖標） -->
+            <div class="footer-middle footer-links-box">
+                <p class="links-label">Links</p>
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/in/hou-meng-leng-2236253b9/" target="_blank" class="footer-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hugo.leng/" target="_blank" class="footer-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 3. 右側：雙行 Email 排版 -->
+            <div class="footer-right footer-email-box">
+                <p class="email-label">Email</p>
+                <p><a href="mailto:uc32570@um.edu.mo" class="footer-email-link">uc32570@um.edu.mo</a></p>
+                <p><a href="mailto:hou.meng.leng@tecnico.ulisboa.pt" class="footer-email-link">hou.meng.leng@tecnico.ulisboa.pt</a></p>
+            </div>
         </div>
     </footer>
+
 
     <!-- 🔗 關鍵除錯點：這裡負責把外部的 JavaScript 檔案拉進來，必須放在 body 的最後面 -->
     <script src="script.js"></script>
