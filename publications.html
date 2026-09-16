@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Leng Hou Meng</title>
+    
+    <!-- 🔗 共享首頁的 CSS 與 Font Awesome 圖標庫 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- 🌟 頂部導航欄 (與所有頁面完全同步，Appointments 設為 active) -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Leng Hou Meng</a>
+            <nav>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="appointments.html" class="nav-link">Appointments</a>
+                <a href="publications.html" class="nav-link">Publications</a>
+                <a href="awards.html" class="nav-link">Honours & Awards</a>
+                <a href="qualifications.html" class="nav-link">Qualifications</a>              
+            </nav>
+        </div>
+    </header>
+
+    <!-- 🌟 主要內容區：帶有優雅的淡入動畫 -->
+    <main class="fade-in-element">
+
+        <!-- ==========================================================================
+             📚 區塊一：期刊論文 (Journal Publications)
+             ========================================================================== -->
+        <div class="education-section-block">
+            <h1 class="page-title">Publications</h1>
+            
+            <h2 class="edu-section-subtitle">Journal Articles</h2>
+            
+            <!-- 📄 論文條目 1 (預留標準 APA 學術引註格式) -->
+            <div class="edu-item-row" style="margin-bottom: 25px;">
+                <div class="edu-details-left">
+                    <p style="font-size: 1.05rem; color: #1d1d1f; line-height: 1.5;">
+                        <!-- 💡 格式示範：作者群 (你的名字加粗) -> 年份 -> 論文題目 -> 期刊名稱(斜體) -->
+                        Co-author A, Co-author B, <strong>Leng, H. M.</strong>, &amp; Principal Investigator. (2026). 
+                        Optoelectronic Characterization and Nanofabrication of Two-Dimensional Layered Materials for High-Performance Photodetectors. 
+                        <span style="font-style: italic; color: #1d1d1f;">ACS Applied Materials &amp; Interfaces</span>, 18(4), 1234–1242.
+                    </p>
+                    <!-- 低調備註：可以用來放 DOI 連結、或者是標記 (Under Review / In Preparation) -->
+                    <p class="edu-honor-subtle" style="margin-top: 5px;">
+                        <a href="#" target="_blank" style="color: #0066cc; text-decoration: none;">[DOI Link]</a> &nbsp;&middot;&nbsp; 
+                        Featured as a supplementary cover article.
+                    </p>
+                </div>
+                <!-- 右側年份保持絕對對齊 -->
+                <div class="edu-year-right">2026</div>
+            </div>
+
+        </div> <!-- 區塊一結束 -->
+
+
+        <!-- ==========================================================================
+             📊 區塊二：會議發表與海報 (Conference Presentations & Posters)
+             ========================================================================== -->
+        <!-- 💡 沿用方案 B，加上 style="border-bottom: none;" 讓最底部保持清爽 -->
+        <div class="education-section-block" style="border-bottom: none;">
+            <h2 class="edu-section-subtitle">Conference Presentations &amp; Posters</h2>
+            
+            <!-- 🎤 會議條目 1 -->
+            <div class="edu-item-row" style="margin-bottom: 25px;">
+                <div class="edu-details-left">
+                    <p style="font-size: 1.05rem; color: #1d1d1f; line-height: 1.5;">
+                        <strong>Leng, H. M.</strong>, &amp; Investigator, X. (2025). 
+                        Cleanroom Nanofabrication Techniques for Ultra-Thin 2D Heterostructures. 
+                        Poster presented at the <span style="font-style: italic;">International Conference on Advanced Materials and Nanotechnology</span>, Hong Kong.
+                    </p>
+                </div>
+                <div class="edu-year-right">2025</div>
+            </div>
+
+        </div> <!-- 區塊二結束 -->
+
+    </main>
+
+
+    <!-- 🌟 底部頁腳：保持與所有頁面完全對稱 -->
+    <footer>
+        <div class="footer-container">
+            <!-- 1. 左側：版權宣告 -->
+            <div class="footer-left">
+                <p>&copy; 2026 Leng Hou Meng. All rights reserved.</p>
+            </div>
+            
+            <!-- 2. 中間：獨立的 Links 區塊 -->
+            <div class="footer-middle footer-links-box">
+                <p class="links-label">Links</p>
+                <div class="footer-social-links">
+                    <a href="https://linkedin.com" target="_blank" class="footer-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="footer-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 3. 右側：雙行 Email 排版 -->
+            <div class="footer-right footer-email-box">
+                <p class="email-label">Email</p>
+                <p><a href="mailto:uc32570@um.edu.mo" class="footer-email-link">uc32570@um.edu.mo</a></p>
+                <p><a href="mailto:hou.meng.leng@tecnico.ulisboa.pt" class="footer-email-link">hou.meng.leng@tecnico.ulisboa.pt</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 🔗 共用首頁的 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
