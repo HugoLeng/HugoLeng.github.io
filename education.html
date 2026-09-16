@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Leng Hou Meng</title>
+    
+    <!-- 🔗 關鍵除錯點：共用首頁的 CSS 與圖標庫 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- 🌟 完全複製首頁：頂部導航欄 -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Leng Hou Meng</a>
+            <nav>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="appointments.html" class="nav-link">Appointments</a>
+                <a href="publications.html" class="nav-link">Publications</a>
+                <a href="awards.html" class="nav-link">Honours & Awards</a>
+                <a href="qualifications.html" class="nav-link">Qualifications</a>               
+            </nav>
+        </div>
+    </header>
+
+    <!-- 🌟 主要內容區：帶有優雅的淡入動畫 -->
+    <main class="fade-in-element">
+        <!-- 💡 整個教育區塊的包裹層 -->
+        <div class="education-section-block">
+            
+            <h1 class="page-title">Education</h1>
+            
+            <!-- 條目 1：澳門大學 -->
+            <div class="edu-item-row">
+                <div class="edu-details-left">
+                    <p class="edu-institution">University of Macau</p>
+                    
+                    <!-- 子區塊 A：科技學院與專業經歷 -->
+                    <div class="edu-sub-block">
+                        <p class="edu-department">Faculty of Engineering &nbsp; &nbsp;   (Formerly Faculty of Science and Technology)</p>
+                        <p class="edu-degree">B.Sc. in Electromechanical Engineering</p>
+                        <!-- ⚖️ 修改：拿掉圖標，類別改為 edu-honor-subtle -->
+                        <p class="edu-honor-subtle">Faculty of Science and Technology - Dean's Honor's List</p>
+                    </div>
+                    
+                    <!-- 子區塊 B：榮譽學院經歷（與上方拉開微小間距） -->
+                    <div class="edu-sub-block">
+                        <p class="edu-department">Honours College</p>
+                        <p class="edu-honor-subtle">Honours College Certificate Programme</p>
+                        <p class="edu-honor-subtle">Honours Class of 2027 - Class 3</p>
+                    </div>
+                </div>
+                <div class="edu-year-right">2023 &ndash; 2027</div>
+            </div>
+
+            <!-- 條目 2：葡萄牙里斯本高工交換 -->
+            <div class="edu-item-row">
+                <div class="edu-details-left">
+                    <p class="edu-institution">Instituto Superior T&eacute;cnico, &nbsp;&nbsp;Universidade de Lisboa</p>
+                    <p class="edu-degree">Exchange Semester</p>
+                </div>
+                <div class="edu-year-right">2026 (Feb &ndash; Jul)</div>
+            </div>
+
+            <!-- 條目 3：慈幼中學 (最後一個學校，下方沒有個人橫線) -->
+            <div class="edu-item-row">
+                <div class="edu-details-left">
+                    <p class="edu-institution">Instituto Salesiano Macau</p>
+                    <p class="edu-degree">Diploma of Science and Technology Section</p>
+                    <p class="edu-honor-subtle">Application Award, Third Position</p>
+                    <p class="edu-honor-subtle">Distinction in Recognition of Academic Performance</p>
+                    <p class="edu-honor-subtle">Distinction in Recognition of Volunteer Services</p>
+                </div>
+                <div class="edu-year-right">2017 &ndash; 2023</div>
+            </div>
+
+        </div>
+
+        <!-- ==========================================================================
+             🎻 全新獨立區塊：Non-Degree Education（完全平行，帶有獨立底線）
+             ========================================================================== -->
+        <div class="education-section-block" style="border-bottom: none;">
+            <h1 class="page-title">Additional Training & Studies</h1>
+            
+            <div class="edu-item-row">
+                <div class="edu-details-left">
+                    <p class="edu-institution">Porsche Driving Academy</p> 
+                    <p class="edu-degree">Pilot Plus Program</p> 
+                </div>
+                    <!-- 右側年份（完美平行對齊） -->
+                    <div class="edu-year-right">2026</div> 
+            </div>
+
+            <div class="edu-item-row">
+                <div class="edu-details-left">
+                    <p class="edu-institution">Escola da Cruz Vermelha de Macau</p> 
+                    <p class="edu-degree">Adult First Aid Course</p> 
+                </div>
+                    <!-- 右側年份（完美平行對齊） -->
+                    <div class="edu-year-right">2024</div> 
+            </div>
+
+            <div class="edu-item-row">
+                <div class="edu-details-left">
+                    <p class="edu-institution">Academia de Música São Pio X</p> 
+                    <p class="edu-degree">Church Organ Playing Certificate Course</p> 
+                </div>
+                    <!-- 右側年份（完美平行對齊） -->
+                    <div class="edu-year-right">2023</div> 
+            </div>
+
+            <div class="edu-item-row">
+                <div class="edu-details-left">
+                    <p class="edu-institution">London College of Music, &nbsp;&nbsp;University of West London</p> 
+                    <p class="edu-degree" >Piano Grade 8 - Distinction</p> 
+
+                </div>
+                    <!-- 右側年份（完美平行對齊） -->
+                    <div class="edu-year-right">2022</div> 
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- 1. 左側：完整保留你的版權宣告 -->
+            <div class="footer-left">
+                <p>&copy; 2026 Leng Hou Meng. All rights reserved.</p>
+            </div>
+            
+            <!-- 2. 中間：獨立的 Links 區塊（上行字，下行圖標） -->
+            <div class="footer-middle footer-links-box">
+                <p class="links-label">Links</p>
+                <div class="footer-social-links">
+                    <a href="https://www.linkedin.com/in/hou-meng-leng-2236253b9/" target="_blank" class="footer-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hugo.leng/" target="_blank" class="footer-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 3. 右側：雙行 Email 排版 -->
+            <div class="footer-right footer-email-box">
+                <p class="email-label">Email</p>
+                <p><a href="mailto:uc32570@um.edu.mo" class="footer-email-link">uc32570@um.edu.mo</a></p>
+                <p><a href="mailto:hou.meng.leng@tecnico.ulisboa.pt" class="footer-email-link">hou.meng.leng@tecnico.ulisboa.pt</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 🔗 共用首頁的 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
