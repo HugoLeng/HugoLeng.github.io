@@ -95,6 +95,8 @@ main {
 }
 
 .bio-text p {
+    text-align: justify;      /* 🌟 核心設定：像 Word 一樣左右兩端對齊 */
+    text-justify: inter-word; /* 優化英文單字間距，避免拉出過大的空白洞 */
     margin-bottom: 20px;
 }
 
@@ -369,4 +371,10 @@ footer p {
     justify-content: space-between; 
     align-items: flex-start;        
     margin-bottom: 13px !important; /* 🌟 核心修正：將原本的 35px 巨大間距縮小至 10px */
+}
+
+@media (max-width: 600px) {
+    .bio-text p {
+        text-align: left;
+    }
 }
