@@ -18,3 +18,41 @@ navLinks.forEach(link => {
         this.classList.add('active');
     });
 });
+
+
+// ==========================================================================
+// 🧩 自動載入共用 Header 與 Footer，並自動高亮當前導航欄頁面
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. 載入 Header
+    const headerPlaceholder = document.getElementById("header-placeholder");
+    if (headerPlaceholder) {
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                headerPlaceholder.innerHTML = data;
+                
+                // 自動比對當前網址，幫對應的導航連結加上 active class
+                let currentPage = window.location.pathname.split("/").pop();
+                if (currentPage === "") currentPage = "index.html"; // 首頁預設
+                
+                const navLinks = headerPlaceholder.querySelectorAll(".nav-link");
+                navLinks.forEach(link => {
+                    if (link.getAttribute("href") === currentPage) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+    }
+
+    // 2. 載入 Footer
+    const footerPlaceholder = document.getElementById("footer-placeholder");
+    if (footerPlaceholder) {
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                footerPlaceholder.innerHTML = data;
+            });
+    }
+});
